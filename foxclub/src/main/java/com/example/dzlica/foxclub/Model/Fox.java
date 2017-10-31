@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 public class Fox {
 
     @Bean
-    public FoxApp foxy() {
-        return new FoxApp();
+    public FoxMaker foxy() {
+        return new FoxMaker();
     }
 }

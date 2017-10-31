@@ -1,17 +1,22 @@
 package com.example.dzlica.foxclub.Model;
 
-public class FoxApp {
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import static java.lang.String.valueOf;
+
+public class FoxMaker {
     String name;
-    String tricks;
+    ArrayList<String> tricks;
     String food;
     String drink;
 
 
-    public FoxApp() {
-        this.name = FoxEns.getARandomName();
-        this.tricks = FoxEns.getARandomTrick();
-        this.food = FoxEns.getARandomFood();
-        this.drink = FoxEns.getARandomDrink();
+    public FoxMaker() {
+        this.name = "Mr. Joe";
+        this.tricks = new ArrayList<String>();
+        this.food = food;
+        this.drink = drink;
     }
 
 
@@ -25,25 +30,21 @@ public class FoxApp {
     }
 
 
-    public String getTricks() {
+    public ArrayList<String> getTricks() {
         return tricks;
     }
 
-
-    public void setTricks(String tricks) {
+    public void setTricks(ArrayList<String> tricks) {
         this.tricks = tricks;
     }
-
 
     public String getFood() {
         return food;
     }
 
-
     public void setFood(String food) {
         this.food = food;
     }
-
 
     public String getDrink() {
         return drink;
@@ -52,6 +53,11 @@ public class FoxApp {
 
     public void setDrink(String drink) {
         this.drink = drink;
+    }
+
+    @Override
+    public String toString() {
+        return food;
     }
 }
 
