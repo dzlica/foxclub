@@ -1,5 +1,7 @@
 package com.example.dzlica.foxclub.Controller;
 
+import com.example.dzlica.foxclub.Model.Drink;
+import com.example.dzlica.foxclub.Model.Food;
 import com.example.dzlica.foxclub.Model.FoxMaker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,7 +18,7 @@ public class MainController {
     FoxMaker myfox;
 
 
-    @RequestMapping({"", "/"})
+    @RequestMapping({"", "/", "index"})
     public String createfox(Model model) {
 
         model.addAttribute("name", myfox.getName());
@@ -29,8 +31,8 @@ public class MainController {
     @GetMapping("/nutritionstore")
     public String nutrition(Model model) {
         model.addAttribute("name", myfox.getName());
-        model.addAttribute("food", myfox.getFood());
-        model.addAttribute("drink", myfox.getDrink());
+        model.addAttribute("foods", Food.foods);
+        model.addAttribute("drinks", Drink.drinks);
         return "nutritionstore";
     }
 
