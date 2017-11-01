@@ -5,13 +5,15 @@
     <title>Information page</title>
 </head>
 <body>
-<p th:text="'Information'" ></p>
+<a th:href="@{/index}" th:text="'Information'" />
+<a th:href="@{/nutritionstore}" th:text="'Nutrition Store'" />
+<a th:href="@{/trickcenter}" th:text="'Trickcenter'" />
+<p></p>
 <img src="greenfox.png"></img>
-<p th:text="'This is ' + ${name} + '. Currently living on ' + ${food} + ' and ' + ${drink} + ' . He knows ' + ${trick} + ' tricks'"></p>
+<p th:text="'This is ' + ${name} + '. Currently living on ' + ${food} + ' and ' + ${drink} + ' . He knows ' + ${tricknum} + ' tricks'"></p>
 <h1>Known tricks</h1>
 <ul>
-    <li>write HTML</li>
-    <li>code in Javae</li>
+    <li th:text="${tricks}"></li>
 </ul>
 </body>
 </html>

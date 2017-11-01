@@ -5,8 +5,10 @@
     <title>What to drink</title>
 </head>
 <body>
-<p th:text="'Information'" ></p>
-<p th:text="'Nutrition Store'" ></p>
+<a th:href="@{/index}" th:text="'Information'" />
+<a th:href="@{/nutritionstore}" th:text="'Nutrition Store'" />
+<a th:href="@{/trickcenter}" th:text="'Trickcenter'" />
+<p></p>
 <form th:action="@{/nutritionstore}" th:object="${myfox}" method="post">
     <select id="food" name="food">
         <option value="NONE">--- Select Food---</option>

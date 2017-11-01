@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Does tricks</title>
+</head>
+<body>
+<a th:href="@{/index}" th:text="'Information'" />
+<a th:href="@{/nutritionstore}" th:text="'Nutrition Store'" />
+<a th:href="@{/trickcenter}" th:text="'Trickcenter'" />
+<p></p>
+<form th:action="@{/trickcenter}" th:object="${myfox}" method="post">
+
+    <input id="tricks" name="tricks" th:value="${tricks}" th:text="${tricks}" />
+    <button type="submit" value="Submit">Submit</button>
+</form>
+</body>
+</html>
