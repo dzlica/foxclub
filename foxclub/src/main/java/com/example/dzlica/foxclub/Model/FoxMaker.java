@@ -34,6 +34,14 @@ public class FoxMaker {
         return tricks;
     }
 
+    public String getTrickList() {
+        String ret = "";
+        for (int i = 0; i < tricks.size(); i++) {
+            ret += tricks.get(i);
+        }
+        return ret;
+    }
+
     public void setTricks(ArrayList<String> tricks) {
         this.tricks = tricks;
     }

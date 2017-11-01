@@ -10,7 +10,9 @@
 <a th:href="@{/trickcenter}" th:text="'Trickcenter'" />
 <p></p>
 <form th:action="@{/trickcenter}" th:object="${myfox}" method="post">
-
+    <input type="hidden" th:field="*{name}" />
+    <input type="hidden" th:field="*{drink}" />
+    <input type="hidden" th:field="*{food}" />
     <input id="tricks" name="tricks" th:value="${tricks}" th:text="${tricks}" />
     <button type="submit" value="Submit">Submit</button>
 </form>
